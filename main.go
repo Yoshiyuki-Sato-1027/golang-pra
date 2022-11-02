@@ -30,4 +30,19 @@ func main() {
 
 	i4 = 450
 	fmt.Println(i4)
+
+	var arr1 [3]int
+	fmt.Println(arr1)
+
+	var arr2 [3]string = [3]string{"A","B"}
+	fmt.Println(arr2)
+
+	arr3 := [3]int{1,2,3}
+	fmt.Println(arr3)
+// ...は要素数をカウントしてくれる
+	arr4 := [...]string{"C","D"}
+	fmt.Println(arr4)
+
+	fmt.Println(arr1[0])
+	fmt.Println(len(arr1))
 }
