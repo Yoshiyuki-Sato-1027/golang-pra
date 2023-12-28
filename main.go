@@ -71,12 +71,24 @@ func main() {
 // 	fmt.Println(arr1[0])
 // 	fmt.Println(len(arr1))
 
-	i := Plus(1,2)
-	fmt.Println(i)
-	// _は引数なし
-	i2, _ := Div(9,3)
+	// i := Plus(1,2)
+	// fmt.Println(i)
+	// // _は引数なし
+	// i2, _ := Div(9,3)
+	// fmt.Println(i2)
+	// i4 := Double(1000)
+	// fmt.Println(i4)
+	// Noreturn()
+
+	// f := func(x, y int) int {
+	// 	return x + y
+	// }
+
+	// (1,2)というん部分は引数を渡している
+	i2 := func(x, y int) int {
+		return x + y
+	}(1,2)
+
+	// i := f(1,2)
 	fmt.Println(i2)
-	i4 := Double(1000)
-	fmt.Println(i4)
-	Noreturn()
 }
