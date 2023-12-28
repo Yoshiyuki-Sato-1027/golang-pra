@@ -30,6 +30,12 @@ func Noreturn() {
 	return 
 }
 
+func ReturnFunc() func() {
+	return func() {
+		fmt.Println("function")
+	}
+}
+
 func main() {
 // 	fmt.Println("Hello World!")
 // 	fmt.Println(time.Now())
@@ -84,11 +90,14 @@ func main() {
 	// 	return x + y
 	// }
 
-	// (1,2)というん部分は引数を渡している
-	i2 := func(x, y int) int {
-		return x + y
-	}(1,2)
+	// // (1,2)というん部分は引数を渡している
+	// i2 := func(x, y int) int {
+	// 	return x + y
+	// }(1,2)
 
-	// i := f(1,2)
-	fmt.Println(i2)
+	// // i := f(1,2)
+	// fmt.Println(i2)
+
+	f := ReturnFunc()
+	f()
 }
