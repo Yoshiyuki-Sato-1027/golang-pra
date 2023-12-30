@@ -36,6 +36,10 @@ func ReturnFunc() func() {
 	}
 }
 
+func CallFunc(f func()) {
+f()
+}
+
 func main() {
 // 	fmt.Println("Hello World!")
 // 	fmt.Println(time.Now())
@@ -98,6 +102,10 @@ func main() {
 	// // i := f(1,2)
 	// fmt.Println(i2)
 
-	f := ReturnFunc()
-	f()
+	// f := ReturnFunc()
+	// f()
+
+	CallFunc(func() {
+		fmt.Println("Func")
+	})
 }
